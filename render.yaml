@@ -1,0 +1,19 @@
+services:
+  - type: web
+    plan: free
+    name: ReportBot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    repo: #Gitrepo
+    branch: master
+    autoDeploy: false
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: OWNER
+        sync: false
